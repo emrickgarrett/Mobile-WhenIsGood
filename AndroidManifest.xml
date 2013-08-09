@@ -27,15 +27,18 @@
         </activity>
         <activity
             android:name="com.example.mobilewhenisgood.BrowseEvents"
-            android:label="@string/title_activity_browse_events" >
+            android:label="@string/title_activity_browse_events"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="com.example.mobilewhenisgood.CreateEvents"
-            android:label="@string/title_activity_create_events" >
+            android:label="@string/title_activity_create_events"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="com.example.mobilewhenisgood.SetAvailability"
-            android:label="@string/title_activity_set_availability" >
+            android:label="@string/title_activity_set_availability"
+            android:screenOrientation="portrait" >
         </activity>
     </application>
 

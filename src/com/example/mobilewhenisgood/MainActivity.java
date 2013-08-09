@@ -39,12 +39,15 @@ public class MainActivity extends Activity implements OnClickListener {
 	@Override
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
+		Intent i;
 		switch(v.getId()){
 		case R.id.create_event:
-			Intent i = new Intent();
+			i = new Intent(this, CreateEvents.class);
+			startActivity(i);
 			break;
 		case R.id.browse_events:
-			System.out.println("Browse Events");
+			i = new Intent(this, BrowseEvents.class);
+			startActivity(i);
 			break;
 		}
 	}
