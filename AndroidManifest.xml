@@ -44,6 +44,10 @@
             android:name="com.example.mobilewhenisgood.UploadEventActivity"
             android:label="@string/title_activity_upload_event" >
         </activity>
+        <activity
+            android:name="com.example.mobilewhenisgood.UserResponseActivity"
+            android:label="@string/title_activity_user_response" >
+        </activity>
     </application>
 
 </manifest>
