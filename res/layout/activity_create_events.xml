@@ -82,29 +82,34 @@
         android:layout_toRightOf="@+id/end_date_set"
         android:layout_below="@+id/time_set"
         android:onClick="onClick" />
-        
-        
-    <ScrollView
-        android:id="@+id/create_content_scroll_area"
+	
+      <TextView
+        android:id="@+id/end_time_set"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/end_date_field">   
-    <View
-        android:id="@+id/create_content_area"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content" />
+        android:textSize="24sp"
+        android:text="@string/end_time_set"
+        android:paddingBottom="10dp"
+        android:layout_below="@+id/end_date_field" />
     
-    
-	</ScrollView> 
-	
+     <Button 
+        android:id="@+id/end_time_field"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Set End Time"
+        android:paddingLeft="10dp"
+        android:layout_toRightOf="@+id/end_time_set"
+        android:layout_below="@+id/end_date_field"
+        android:onClick="onClick" />
+        
+        
     <Button 
        android:id="@+id/create_event_button"
        android:layout_width="wrap_content"
        android:layout_height="40dp"
        android:text="Create Event"
-       android:paddingLeft="10dp"
        android:layout_centerHorizontal="true"
-       android:layout_below="@+id/create_content_scroll_area"
+       android:layout_below="@+id/end_time_field"
        android:onClick="onClick" />
     
 </RelativeLayout>

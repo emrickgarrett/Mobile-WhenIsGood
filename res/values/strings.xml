@@ -12,8 +12,10 @@
     <string name="name_set">Name:</string>
     <string name="date_set">Date:</string>
     <string name="end_date_set">End Date:</string>
+    <string name="end_time_set">End Time:</string>
     <string name="time_set">Time:</string>
     <string name="custom_set">Custom</string>
     <string name="submit">Submit</string>
+    <string name="title_activity_upload_event">UploadEventActivity</string>
 
 </resources>

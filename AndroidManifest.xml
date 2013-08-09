@@ -40,6 +40,10 @@
             android:label="@string/title_activity_set_availability"
             android:screenOrientation="portrait" >
         </activity>
+        <activity
+            android:name="com.example.mobilewhenisgood.UploadEventActivity"
+            android:label="@string/title_activity_upload_event" >
+        </activity>
     </application>
 
 </manifest>
