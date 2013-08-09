@@ -38,7 +38,7 @@ public class MainActivity extends Activity implements OnClickListener {
 
 	@Override
 	public void onClick(View v) {
-		// TODO Auto-generated method stub
+		// Takes User to new activity based on selection, passes in user info
 		Intent i;
 		Bundle b = new Bundle();
 		b.putSerializable("userinfo", dummy);
