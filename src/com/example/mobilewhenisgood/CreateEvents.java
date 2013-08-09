@@ -148,6 +148,22 @@ public class CreateEvents extends Activity implements OnClickListener {
 		
 	}
 	
+	public void resetFields(){
+		startDay = 0;
+		endDay = 0;
+		startMonth = 0;
+		endMonth = 0;
+		startYear = 0;
+		endYear = 0;
+		
+		startHour = 0;
+		endHour = 0;
+		
+		EditText field = (EditText) findViewById(R.id.name_field);
+		field.setText("");
+		field.setHint("Insert Name Here");
+	}
+	
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
 		if (requestCode == 1) {
@@ -155,12 +171,14 @@ public class CreateEvents extends Activity implements OnClickListener {
 		     if(resultCode == RESULT_OK){
 
 		      Toast.makeText(this, "Upload was successful", Toast.LENGTH_SHORT).show();
+		      finish();
 
 		     }
 
      	if (resultCode == RESULT_CANCELED) {
 
 	    	 Toast.makeText(this, "Upload Failed, try again", Toast.LENGTH_SHORT).show();
+	    	 resetFields();
 
 	     	}
 		}
