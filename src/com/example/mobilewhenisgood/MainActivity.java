@@ -1,6 +1,7 @@
 package com.example.mobilewhenisgood;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -11,6 +12,7 @@ import android.widget.TextView;
 public class MainActivity extends Activity implements OnClickListener {
 	
 	public static String TAG = "WhenIsGood";
+	private UserInfo dummy; //Debug purposes only
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +22,10 @@ public class MainActivity extends Activity implements OnClickListener {
 		TextView browse = (TextView) findViewById(R.id.browse_events);
 		create.setOnClickListener(this);
 		browse.setOnClickListener(this);
+		
+		
+		//Create dummy user information for use in app.
+		dummy = new UserInfo();
 	}
 
 	@Override
@@ -35,7 +41,7 @@ public class MainActivity extends Activity implements OnClickListener {
 		// TODO Auto-generated method stub
 		switch(v.getId()){
 		case R.id.create_event:
-			System.out.println("Event created");
+			Intent i = new Intent();
 			break;
 		case R.id.browse_events:
 			System.out.println("Browse Events");
