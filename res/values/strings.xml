@@ -9,5 +9,11 @@
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_create_events">CreateEvents</string>
     <string name="title_activity_set_availability">SetAvailability</string>
+    <string name="name_set">Name:</string>
+    <string name="date_set">Date:</string>
+    <string name="end_date_set">End Date:</string>
+    <string name="time_set">Time:</string>
+    <string name="custom_set">Custom</string>
+    <string name="submit">Submit</string>
 
 </resources>

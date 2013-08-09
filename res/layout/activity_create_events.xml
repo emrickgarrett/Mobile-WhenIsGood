@@ -9,8 +9,102 @@
     tools:context=".CreateEvents" >
 
     <TextView
+        android:id="@+id/name_set"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
-
+        android:text="@string/name_set"
+        android:textSize="24sp"
+        android:paddingTop="20dp" />
+    
+    <EditText 
+        android:id="@+id/name_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Name of Event"
+        android:paddingLeft="10dp"
+        android:paddingTop="20dp"
+        android:layout_toRightOf="@+id/name_set" />
+    
+    <TextView
+        android:id="@+id/date_set"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:text="@string/date_set"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_below="@+id/name_set" />
+    
+    <Button 
+        android:id="@+id/date_field"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Set Date"
+        android:paddingLeft="10dp"
+        android:layout_toRightOf="@+id/date_set"
+        android:layout_below="@+id/name_set"
+        android:onClick="onClick" />
+    
+    <TextView
+        android:id="@+id/time_set"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:text="@string/time_set"
+        android:paddingBottom="10dp"
+        android:layout_below="@+id/date_set" />
+    
+   <Button 
+        android:id="@+id/time_field"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Set Time"
+        android:paddingLeft="10dp"
+        android:layout_toRightOf="@+id/time_set"
+        android:layout_below="@+id/date_set"
+        android:onClick="onClick" />
+    
+    <TextView
+        android:id="@+id/end_date_set"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:text="@string/end_date_set"
+        android:paddingBottom="10dp"
+        android:layout_below="@+id/time_set" />
+    
+        <Button 
+        android:id="@+id/end_date_field"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Set End Date"
+        android:paddingLeft="10dp"
+        android:layout_toRightOf="@+id/end_date_set"
+        android:layout_below="@+id/time_set"
+        android:onClick="onClick" />
+        
+        
+    <ScrollView
+        android:id="@+id/create_content_scroll_area"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/end_date_field">   
+    <View
+        android:id="@+id/create_content_area"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    
+    
+	</ScrollView> 
+	
+    <Button 
+       android:id="@+id/create_event_button"
+       android:layout_width="wrap_content"
+       android:layout_height="40dp"
+       android:text="Create Event"
+       android:paddingLeft="10dp"
+       android:layout_centerHorizontal="true"
+       android:layout_below="@+id/create_content_scroll_area"
+       android:onClick="onClick" />
+    
 </RelativeLayout>
