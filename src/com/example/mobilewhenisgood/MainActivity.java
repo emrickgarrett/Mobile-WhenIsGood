@@ -40,13 +40,17 @@ public class MainActivity extends Activity implements OnClickListener {
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
 		Intent i;
+		Bundle b = new Bundle();
+		b.putSerializable("userinfo", dummy);
 		switch(v.getId()){
 		case R.id.create_event:
 			i = new Intent(this, CreateEvents.class);
+			i.putExtras(b);
 			startActivity(i);
 			break;
 		case R.id.browse_events:
 			i = new Intent(this, BrowseEvents.class);
+			i.putExtras(b);
 			startActivity(i);
 			break;
 		}

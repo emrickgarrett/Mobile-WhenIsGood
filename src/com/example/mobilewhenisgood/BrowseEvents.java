@@ -6,10 +6,15 @@ import android.view.Menu;
 
 public class BrowseEvents extends Activity {
 
+	public UserInfo dummy;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_browse_events);
+		
+		Bundle b = getIntent().getExtras();
+		dummy = (UserInfo) b.getSerializable("userinfo");
 	}
 
 	@Override
