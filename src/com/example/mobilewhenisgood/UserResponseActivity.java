@@ -23,15 +23,15 @@ public class UserResponseActivity extends Activity {
 		
 		Bundle b = getIntent().getExtras(); //This will be the event I will respond to.
 		
-		b.getInt("startyear");
-		b.getInt("startmonth");
-		b.getInt("startday");
+		startYear = b.getInt("startyear");
+		startMonth = b.getInt("startmonth");
+		startDay = b.getInt("startday");
 		
-		b.getInt("endyear");
-		b.getInt("endmonth");
-		b.getInt("endday");
+		endYear = b.getInt("endyear");
+		endMonth = b.getInt("endmonth");
+		endDay = b.getInt("endday");
 		
-		b.getString("eventname");
+		eventName = b.getString("eventname");
 		
 		populateList();
 	}
