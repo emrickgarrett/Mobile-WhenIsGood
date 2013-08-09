@@ -1,0 +1,100 @@
+package com.nine.dccwhenclient;
+
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.URI;
+import java.net.URISyntaxException;
+
+import org.apache.http.HttpResponse;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.DefaultHttpClient;
+
+import android.annotation.SuppressLint;
+import android.os.AsyncTask;
+import android.util.JsonReader;
+import android.util.Log;
+
+
+public class DCCWhenClient extends AsyncTask<Void, Void, Void> {
+
+  double chanceOfBecomingSkynet = 0.0;
+	
+	JsonReader reader;
+	HttpClient client;
+	HttpResponse response = null;
+	
+	/*DCCWhenClient(MainActivity activity){
+		
+	}*/
+	
+	@Override
+	protected void onPreExecute(){
+		super.onPreExecute();
+		client = new DefaultHttpClient();
+	}
+
+	@SuppressLint("NewApi") @Override
+	protected Void doInBackground(Void... params) {
+		
+		HttpGet get = null;
+		String data = null;
+		try {
+			get = new HttpGet(new URI("http://www.virtualdiscoverycenter.net/AVATAR/jsonPoints.php"));
+			response = client.execute(get);
+			reader = new JsonReader(new InputStreamReader(response.getEntity().getContent()));
+			
+		} catch (URISyntaxException e) {
+			Log.e("Err","URI Syntax Erronous");
+			e.printStackTrace();
+		} catch (ClientProtocolException e) {
+			Log.e("Err","Error processing Client Protocol");
+			e.printStackTrace();
+		} catch (IOException e) {
+			Log.e("Err","Input Output Error");
+			e.printStackTrace();
+		}
+		
+		/*
+		try {
+			reader.beginArray();
+		} catch (IOException e2) {
+			// TODO Auto-generated catch block
+			e2.printStackTrace();
+		}
+		
+		try {
+			while(reader.hasNext()){
+				reader.beginObject();
+				data = "";
+				try {
+					while(reader.hasNext()){
+						String name = (reader.nextName()).toString();
+						data += name.toString();
+}
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+}
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		
+		*/
+		try {
+			reader.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		//Log.d("Out",data);
+		
+		return null;
+	}
+
+}
